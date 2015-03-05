@@ -1,10 +1,9 @@
 package com.android.marion.calculator;
 
+import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.os.PersistableBundle;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,7 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity implements Parcelable{
+public class MainActivity extends ActionBarActivity implements Parcelable {
     private CalculatorEngine calculatorEngine;
     private Button buttonC;
     private Button buttonCE;
@@ -68,8 +67,8 @@ public class MainActivity extends ActionBarActivity implements Parcelable{
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        CalculatorEngine engine = (CalculatorEngine)savedInstanceState.getSerializable("obj");
-        if(engine !=null)
+        CalculatorEngine engine = (CalculatorEngine) savedInstanceState.getSerializable("obj");
+        if (engine != null)
             calculatorEngine = engine;
     }
 
@@ -86,7 +85,7 @@ public class MainActivity extends ActionBarActivity implements Parcelable{
             @Override
             public void onClick(View v) {
                 calculatorEngine.clear();
-refreshDisplay();
+                refreshDisplay();
             }
         });
 

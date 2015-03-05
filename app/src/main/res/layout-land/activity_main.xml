@@ -37,7 +37,7 @@
                 android:id="@+id/result"
              android:textSize="22sp"
                 android:layout_column="3"
-
+android:ems="10"
                 android:textStyle="bold"
                 android:layout_gravity="right"
                 android:textColor="#ff0e1cff" />
