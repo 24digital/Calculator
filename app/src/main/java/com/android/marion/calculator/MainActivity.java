@@ -95,7 +95,7 @@ public class MainActivity extends ActionBarActivity implements Parcelable {
             @Override
             public void onClick(View v) {
                 calculatorEngine.clearEntry();
-                refreshDisplay();
+         
             }
         });
 
@@ -126,7 +126,7 @@ public class MainActivity extends ActionBarActivity implements Parcelable {
         buttonSeven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                compute('7');
+                calculatorEngine.insert('7');
             }
         });
 
@@ -135,7 +135,7 @@ public class MainActivity extends ActionBarActivity implements Parcelable {
         buttonEight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                compute('8');
+               calculatorEngine.insert('8');
             }
         });
 
@@ -154,7 +154,7 @@ public class MainActivity extends ActionBarActivity implements Parcelable {
         buttonTimes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                refreshDisplay("*");
+                calculatorEngine.insert('*');
                 calculatorEngine.perform(Operation.MULTIPLY);
             }
         });
@@ -164,7 +164,7 @@ public class MainActivity extends ActionBarActivity implements Parcelable {
         buttonFour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                compute('4');
+                calculatorEngine.insert('4');
             }
         });
 
@@ -173,7 +173,7 @@ public class MainActivity extends ActionBarActivity implements Parcelable {
         buttonFive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                compute('5');
+                calculatorEngine.insert('5');
             }
         });
 
@@ -182,7 +182,7 @@ public class MainActivity extends ActionBarActivity implements Parcelable {
         buttonSix.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                compute('6');
+                calculatorEngine.insert('6');
             }
         });
 
@@ -209,7 +209,7 @@ public class MainActivity extends ActionBarActivity implements Parcelable {
         buttonThree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                compute('3');
+                calculatorEngine.insert('3');
             }
         });
 
@@ -218,7 +218,7 @@ public class MainActivity extends ActionBarActivity implements Parcelable {
         buttonEight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                compute('8');
+                calculatorEngine.insert('8');
             }
         });
 
@@ -227,7 +227,7 @@ public class MainActivity extends ActionBarActivity implements Parcelable {
         buttonZero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                compute('0');
+                calculatorEngine.insert('0');
             }
         });
 
@@ -236,7 +236,7 @@ public class MainActivity extends ActionBarActivity implements Parcelable {
         buttonMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                refreshDisplay("-");
+
                 calculatorEngine.perform(Operation.SUBTRACT);
             }
         });
@@ -247,7 +247,7 @@ public class MainActivity extends ActionBarActivity implements Parcelable {
         buttonPeriod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                compute('.');
+                calculatorEngine.insert('.');
             }
         });
 
@@ -271,7 +271,7 @@ public class MainActivity extends ActionBarActivity implements Parcelable {
                 buttonPlus.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        refreshDisplay("+");
+
                         calculatorEngine.perform(Operation.ADD);
                     }
                 });
