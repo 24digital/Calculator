@@ -95,7 +95,7 @@ public class MainActivity extends ActionBarActivity implements Parcelable {
             @Override
             public void onClick(View v) {
                 calculatorEngine.clearEntry();
-         
+
             }
         });
 
